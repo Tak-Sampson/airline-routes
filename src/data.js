@@ -1392,7 +1392,16 @@ const airports = [
     {"code":"DOH","name":"Doha International Airport","lat":25.261111,"long":51.565},
     {"code":"WAE","name":"Wadi al-Dawasir Domestic Airport","lat":20.504167,"long":45.199444},
     {"code":"BGG","name":"Bingöl Airport","lat":38.861111,"long":40.5925},
-
 ];
 
+const getAirlineById = (id) => (
+  airlines.find(a => a.id === id)
+);
+
+const getAirportByCode = (code) => (
+  airports.find(a => a.code === code)
+);
+
 export default {routes, airlines, airports};
+export {getAirlineById, getAirportByCode};
+
